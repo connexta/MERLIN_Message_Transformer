@@ -10,7 +10,7 @@ paper from the OGC:
 
 # Project Structure
 
-This library is built as a standard Java jar file with slf4j logging API included but no loggin implementations.
+This library is built as a standard Java jar file with slf4j logging API included but no logging implementations.
 All the dependencies are included in the uberjar that is created as part of a `mvn clean install`.
 
 This version of the library utilizes JAXB to unmarshal XML input into Java objects. These objects are then
@@ -25,7 +25,7 @@ project, you just need to have a configuration file for a logging backend that s
 
 ## Dependencies
 
-The uberjar created by this project includes all of the dependencies needed to work properly. This includes:
+The uberjar created by this project includes all the dependencies needed to work properly. This includes:
 
 * jaxb-api
 * jackson-databind
@@ -52,13 +52,13 @@ This will create 2 jar files in the target directory. The jar file names are:
 * SWEXmlParser-1.0-SNAPSHOT-shaded.jar
 * SWEXmlParser-1.0-SNAPSHOT.jar
 
-The shaded jar contains all of the required dependencies for the transformers to work. The non-shaded
+The shaded jar contains all the required dependencies for the transformers to work. The non-shaded
 jar only containes the actual class files from this project (no dependencies).
 
 # Usage
 The library consists of an interface (`SWETransform`) containing static methods to invoke in order to 
 transform data from XML format to JSON.
-Currently only the `InsertSensorTransformer` is implemented. Others will be added in time.
+Currently, only the `InsertSensorTransformer` is implemented. Others will be added in time.
 
 `InsertSensorTransformer` has three signatures that can be used - taking as input:
 * String
@@ -75,7 +75,7 @@ public static String insertSensorToJSON(InputStream is) throws IllegalArgumentEx
 ## Examples
 The lone unit test that just runs a sample InsertObservation request through the transformer provides
 an indication of how to use the library. You can basically call one of the above functions with your
-XML InsertSensor request and it will return the JSON equivalent.
+XML InsertSensor request, and it will return the JSON equivalent.
 
 ## Command Line Usage
 A `main` method is included in the library so that you can use the library from the command line. With
@@ -85,7 +85,7 @@ like the following:
 ```shell
 java -jar target/SWEXmlParser-1.0-SNAPSHOT-shaded.jar  src/test/resources/trailcam.xml
 ```
-Because there is no logging backend configured in the library, some of the debug messages are output to
+Because there is no logging backend configured in the library, some debug messages are output to
 the console when you run this way - the output looks like:
 ```shell
 SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
@@ -97,10 +97,10 @@ If you wanted to get clean output from the command and pipe it through `jq` to p
 add the nop slf4j logging implementation to the classpath. You can't add an additional jar to the classpath
 using the `-jar` notation, so you have to use the `-cp` notation (and provide the name of the class 
 with the `main` method). Assuming you download the slf4j nop jar file into your current directory, the
-command to pretty-print the sample looks like the following:
+command to pretty-print the sample and its output looks like the following:
 ```shell
 java -cp ./slf4j-nop-1.7.32.jar:target/SWEXmlParser-1.0-SNAPSHOT-shaded.jar \
-     mil.dia.swe.SWETransform ../ogcJson/src/test/resources/GBOSS-insert-sensor-video.xml | jq .
+     mil.dia.swe.SWETransform src/test/resources/trailcam.xml | jq .
 {
   "observableProperty": "urn:gsw:def:phenomenon:radiance\n\t",
   "metadata": {
@@ -255,7 +255,7 @@ java -cp ./slf4j-nop-1.7.32.jar:target/SWEXmlParser-1.0-SNAPSHOT-shaded.jar \
 
 # ToDo:
 * Fix the ordering to the recommended ordering by the best practices and the XML schemas
-* Include all of the options for the abstract classes - only the ones in the sample files were included
+* Include all the options for the abstract classes - only the ones in the sample files were included
 * Consider switching to a streaming parser and converting on the fly based on the rulesets
 * Write actual unit tests
 * Add the other SOS/SWE XML formats (InsertObservation, DescribeSensor) and the corresponding responses
