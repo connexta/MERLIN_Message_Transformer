@@ -1,0 +1,176 @@
+<ns2:InsertSensor
+	xmlns:ns2="http://www.opengis.net/swes/2.0"
+	xmlns:ns1="http://www.w3.org/1999/xlink"
+	xmlns:ns10="http://www.opengis.net/sampling/2.0"
+	xmlns:ns11="http://www.opengis.net/samplingSpatial/2.0"
+	xmlns:ns12="http://www.opengis.net/sos/2.0"
+	xmlns:ns13="http://www.w3.org/2005/08/addressing"
+	xmlns:ns14="http://docs.oasis-open.org/wsn/t-1"
+	xmlns:ns15="http://www.opengis.net/ows/1.1"
+	xmlns:ns16="http://www.opengis.net/fes/2.0"
+	xmlns:ns17="http://www.opengis.net/sensorML/1.0.1"
+	xmlns:ns18="http://www.opengis.net/gml"
+	xmlns:ns19="urn:us:gov:ic:ism:v2"
+	xmlns:ns20="http://www.opengis.net/swe/1.0.1"
+	xmlns:ns21="http://www.w3.org/2001/SMIL20/"
+	xmlns:ns22="http://www.opengis.net/om/1.0"
+	xmlns:ns23="http://www.opengis.net/sampling/1.0"
+	xmlns:ns24="http://www.w3.org/2001/SMIL20/Language"
+	xmlns:ns3="http://www.opengis.net/gml/3.2"
+	xmlns:ns4="http://www.opengis.net/om/2.0"
+	xmlns:ns5="http://www.isotc211.org/2005/gco"
+	xmlns:ns6="http://www.isotc211.org/2005/gmd"
+	xmlns:ns7="http://www.isotc211.org/2005/gts"
+	xmlns:ns8="http://www.opengis.net/swe/2.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="SOS"
+	version="2.0.0">
+	<ns2:procedureDescriptionFormat>http://www.opengis.net/sensorML/1.0.1
+	</ns2:procedureDescriptionFormat>
+	<ns2:procedureDescription>
+		<ns17:SensorML version="1.0.1">
+			<ns17:keywords ns1:type="simple">
+				<ns17:KeywordList>
+					<ns17:keyword>Trailcam</ns17:keyword>
+					<ns17:keyword>unattended</ns17:keyword>
+					<ns17:keyword>ground</ns17:keyword>
+					<ns17:keyword>sensors</ns17:keyword>
+					<ns17:keyword>ugs</ns17:keyword>
+				</ns17:KeywordList>
+			</ns17:keywords>
+			<ns17:identification ns1:type="simple">
+				<ns17:IdentifierList>
+					<ns17:identifier name="uniqueID">
+						<ns17:Term
+							definition="urn:ogc:def:identifierType:OGC:uniqueID">
+							<ns17:value>urn:ogc:object:Sensor:Trailcam</ns17:value>
+						</ns17:Term>
+					</ns17:identifier>
+					<ns17:identifier name="uniqueID">
+						<ns17:Term
+							definition="urn:ogc:def:identifier:OGC:1.0:uniqueID">
+							<ns17:value>urn:ogc:object:Sensor:Trailcam</ns17:value>
+						</ns17:Term>
+					</ns17:identifier>
+					<ns17:identifier name="longName">
+						<ns17:Term
+							definition="urn:ogc:def:identifier:OGC:1.0:longName">
+							<ns17:value>Super Secret Trailcam</ns17:value>
+						</ns17:Term>
+					</ns17:identifier>
+					<ns17:identifier name="shortName">
+						<ns17:Term
+							definition="urn:ogc:def:identifier:OGC:1.0:shortName">
+							<ns17:value>Trailcam</ns17:value>
+						</ns17:Term>
+					</ns17:identifier>
+				</ns17:IdentifierList>
+			</ns17:identification>
+			<ns17:validTime>
+				<ns18:TimeInstant
+					ns18:id="sensorDescriptionValidTime">
+					<ns18:timePosition indeterminatePosition="after">2020-01-01T00:00:01Z
+					</ns18:timePosition>
+				</ns18:TimeInstant>
+			</ns17:validTime>
+			<ns17:characteristics ns1:type="simple">
+				<ns20:DataRecord>
+					<ns20:field name="Battery Amp-hours remaining">
+						<ns20:Quantity>
+							<ns20:uom ns1:href="urn:ogc:def:uom:OGC:1.0:ampHours"
+								ns1:type="simple" />
+							<ns20:value>3.600</ns20:value>
+						</ns20:Quantity>
+					</ns20:field>
+					<ns20:field name="Sensor State">
+						<ns20:Text>
+							<ns20:value>A</ns20:value>
+						</ns20:Text>
+					</ns20:field>
+					<ns20:field name="Sensor String">
+						<ns20:Text>
+							<ns20:value>Trailcam</ns20:value>
+						</ns20:Text>
+					</ns20:field>
+					<ns20:field name="Inbound Channel">
+						<ns20:Text>
+							<ns20:value>0001</ns20:value>
+						</ns20:Text>
+					</ns20:field>
+					<ns20:field name="Device ID">
+						<ns20:Text>
+							<ns20:value>000001</ns20:value>
+						</ns20:Text>
+					</ns20:field>
+					<ns20:field name="Plan Name">
+						<ns20:Text>
+							<ns20:value>Capture Bigfoot</ns20:value>
+						</ns20:Text>
+					</ns20:field>
+					<ns20:field name="Plan Owner">
+						<ns20:Text>
+							<ns20:value>Willey Ohioman</ns20:value>
+						</ns20:Text>
+					</ns20:field>
+					<ns20:field name="Comments">
+						<ns20:Text>
+							<ns20:value>Willey Ohioman</ns20:value>
+						</ns20:Text>
+					</ns20:field>
+					<ns20:field name="Symbol String">
+						<ns20:Text>
+							<ns20:value>SFGPES------US-</ns20:value>
+						</ns20:Text>
+					</ns20:field>
+				</ns20:DataRecord>
+			</ns17:characteristics>
+			<ns17:member ns1:type="simple">
+				<ns17:Component>
+					<ns18:description ns1:type="simple">An unattended ground
+						sensor with sophisticaed image recognition capabilities that only
+						takes pictures of bigfoot</ns18:description>
+					<ns18:name>Trailcam</ns18:name>
+					<ns17:location ns1:type="simple">
+						<ns18:Point ns18:id="sensorLocation" srsDimension="3"
+							srsName="EPSG:4979">
+							<ns18:pos>39.69427 -84.10164 0.0</ns18:pos>
+						</ns18:Point>
+					</ns17:location>
+					<ns17:outputs ns1:type="simple">
+						<ns17:OutputList>
+							<ns17:output name="Message Type" ns1:type="simple">
+								<ns20:Text>
+									<ns20:value />
+								</ns20:Text>
+							</ns17:output>
+							<ns17:output name="Channel" ns1:type="simple">
+								<ns20:Text>
+									<ns20:value />
+								</ns20:Text>
+							</ns17:output>
+							<ns17:output name="Detail" ns1:type="simple">
+								<ns20:Text>
+									<ns20:value />
+								</ns20:Text>
+							</ns17:output>
+							<ns17:output name="Image" ns1:type="simple">
+								<ns20:Text>
+									<ns20:value />
+								</ns20:Text>
+							</ns17:output>
+						</ns17:OutputList>
+					</ns17:outputs>
+				</ns17:Component>
+			</ns17:member>
+		</ns17:SensorML>
+	</ns2:procedureDescription>
+	<ns2:observableProperty>urn:gsw:def:phenomenon:radiance
+	</ns2:observableProperty>
+	<ns2:metadata>
+		<ns12:SosInsertionMetadata>
+			<ns12:observationType>http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_ComplexObservation
+			</ns12:observationType>
+			<ns12:featureOfInterestType>http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint
+			</ns12:featureOfInterestType>
+		</ns12:SosInsertionMetadata>
+	</ns2:metadata>
+</ns2:InsertSensor>

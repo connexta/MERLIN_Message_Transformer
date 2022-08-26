@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>mil.dia.merlin</groupId>
+    <artifactId>SWEXmlParser</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>SWEXmlParser</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>8</maven.compiler.source>
+        <jackson.version>2.13.1</jackson.version>
+        <json-simple.version>1.1.1</json-simple.version>
+        <jaxb-api.version>2.3.1</jaxb-api.version>
+        <slf4j.version>1.7.32</slf4j.version>
+        <logback.version>1.2.3</logback.version>
+        <ogc.schema.version>3.0.0</ogc.schema.version>
+        <main.class>mil.dia.swe.SWETransform</main.class>
+        <maven-shade-plugin.version>3.2.1</maven-shade-plugin.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-xml</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.googlecode.json-simple</groupId>
+                <artifactId>json-simple</artifactId>
+                <version>${json-simple.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${jaxb-api.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.ogc-schemas/om-v_2_0 -->
+            <dependency>
+                <groupId>org.ogc-schemas</groupId>
+                <artifactId>om-v_2_0</artifactId>
+                <version>${ogc.schema.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.ogc-schemas/sensorML-v_1_0_1 -->
+            <dependency>
+                <groupId>org.ogc-schemas</groupId>
+                <artifactId>sensorML-v_1_0_1</artifactId>
+                <version>${ogc.schema.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.ogc-schemas/sos-v_2_0 -->
+            <dependency>
+                <groupId>org.ogc-schemas</groupId>
+                <artifactId>sos-v_2_0</artifactId>
+                <version>${ogc.schema.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.ogc-schemas/sweCommon-v_2_0 -->
+            <dependency>
+                <groupId>org.ogc-schemas</groupId>
+                <artifactId>sweCommon-v_2_0</artifactId>
+                <version>${ogc.schema.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.ogc-schemas/samplingSpatial-v_2_0 -->
+            <dependency>
+                <groupId>org.ogc-schemas</groupId>
+                <artifactId>samplingSpatial-v_2_0</artifactId>
+                <version>${ogc.schema.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>5.7.2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>${maven-shade-plugin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jaxb</groupId>
+                <artifactId>jaxb-runtime</artifactId>
+                <version>${jaxb-api.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.ogc-schemas/om-v_2_0 -->
+        <dependency>
+            <groupId>org.ogc-schemas</groupId>
+            <artifactId>om-v_2_0</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.ogc-schemas/sensorML-v_1_0_1 -->
+        <dependency>
+            <groupId>org.ogc-schemas</groupId>
+            <artifactId>sensorML-v_1_0_1</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.ogc-schemas/sos-v_2_0 -->
+        <dependency>
+            <groupId>org.ogc-schemas</groupId>
+            <artifactId>sos-v_2_0</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.ogc-schemas/sweCommon-v_2_0 -->
+        <dependency>
+            <groupId>org.ogc-schemas</groupId>
+            <artifactId>sweCommon-v_2_0</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.ogc-schemas/samplingSpatial-v_2_0 -->
+        <dependency>
+            <groupId>org.ogc-schemas</groupId>
+            <artifactId>samplingSpatial-v_2_0</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <!--
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.source}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <shadedArtifactAttached>true</shadedArtifactAttached>
+                            <transformers>
+                                <transformer implementation=
+                                                     "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>${main.class}</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

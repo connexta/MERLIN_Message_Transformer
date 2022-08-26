@@ -1,0 +1,35 @@
+*.project
+*.settings
+*.classpath
+*.metadata
+*.iml
+*.idea
+*.checkstyle
+*.DS_Store
+*.pyc
+.vscode/
+node_modules/
+node/
+target/
+bin/
+*__pycache__
+atlassian-ide-plugin.xml
+*.sonar-ide.properties
+**/webapp/css/styles.css
+platform/solr/**/overlays
+dependency-reduced-pom.xml
+docker-bundle.tar.gz
+
+# Sensitive file
+**/build-diff/.env
+
+# JMeter Related files to ignore
+jmeter.log
+*.jmx.log
+*.jtl
+.vagrant
+**/vagrant-puppet-docker/soaesb
+**/vagrant-puppet-docker/hieradata
+**/soapui-assets/*.log
+venv
+
