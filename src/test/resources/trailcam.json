@@ -1,0 +1,150 @@
+{
+  "observableProperty": "urn:gsw:def:phenomenon:radiance\n\t",
+  "metadata": {
+    "observationType": "http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_ComplexObservation",
+    "featureOfInterestType": "http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint",
+    "type": "SosInsertionMetadata"
+  },
+  "procedureDescription": {
+    "characteristics": {
+      "field": [
+        {
+          "uom": {
+            "href": "urn:ogc:def:uom:OGC:1.0:ampHours"
+          },
+          "name": "Battery Amp-hours remaining",
+          "type": "Quantity",
+          "value": 3.6
+        },
+        {
+          "name": "Sensor State",
+          "type": "Text",
+          "value": "A"
+        },
+        {
+          "name": "Sensor String",
+          "type": "Text",
+          "value": "Trailcam"
+        },
+        {
+          "name": "Inbound Channel",
+          "type": "Text",
+          "value": "0001"
+        },
+        {
+          "name": "Device ID",
+          "type": "Text",
+          "value": "000001"
+        },
+        {
+          "name": "Plan Name",
+          "type": "Text",
+          "value": "Capture Bigfoot"
+        },
+        {
+          "name": "Plan Owner",
+          "type": "Text",
+          "value": "Willey Ohioman"
+        },
+        {
+          "name": "Comments",
+          "type": "Text",
+          "value": "Willey Ohioman"
+        },
+        {
+          "name": "Symbol String",
+          "type": "Text",
+          "value": "SFGPES------US-"
+        }
+      ],
+      "type": "DataRecord"
+    },
+    "identification": {
+      "identifier": [
+        {
+          "name": "uniqueID",
+          "definition": "urn:ogc:def:identifierType:OGC:uniqueID",
+          "type": "Term",
+          "value": "urn:ogc:object:Sensor:Trailcam"
+        },
+        {
+          "name": "uniqueID",
+          "definition": "urn:ogc:def:identifier:OGC:1.0:uniqueID",
+          "type": "Term",
+          "value": "urn:ogc:object:Sensor:Trailcam"
+        },
+        {
+          "name": "longName",
+          "definition": "urn:ogc:def:identifier:OGC:1.0:longName",
+          "type": "Term",
+          "value": "Super Secret Trailcam"
+        },
+        {
+          "name": "shortName",
+          "definition": "urn:ogc:def:identifier:OGC:1.0:shortName",
+          "type": "Term",
+          "value": "Trailcam"
+        }
+      ],
+      "type": "IdentifierList"
+    },
+    "keywords": {
+      "type": "KeywordList",
+      "keyword": [
+        "Trailcam",
+        "unattended",
+        "ground",
+        "sensors",
+        "ugs"
+      ]
+    },
+    "member": {
+      "outputs": {
+        "output": [
+          {
+            "name": "Message Type",
+            "type": "Text",
+            "value": ""
+          },
+          {
+            "name": "Channel",
+            "type": "Text",
+            "value": ""
+          },
+          {
+            "name": "Detail",
+            "type": "Text",
+            "value": ""
+          },
+          {
+            "name": "Image",
+            "type": "Text",
+            "value": ""
+          }
+        ],
+        "type": "OutputList"
+      },
+      "name": "Trailcam",
+      "description": "An unattended ground\n\t\t\t\t\t\tsensor with sophisticaed image recognition capabilities that only\n\t\t\t\t\t\ttakes pictures of bigfoot",
+      "location": {
+        "srsName": "EPSG:4979",
+        "srsDimension": "3",
+        "pos": "39.69427 -84.10164 0.0",
+        "id": "sensorLocation",
+        "type": "Point"
+      },
+      "type": "Component",
+      "sweName": "name"
+    },
+    "validTime": {
+      "timePosition": {
+        "value": "2020-01-01T00:00:01Z",
+        "indeterminatePosition": "after"
+      },
+      "type": "TimeInstant"
+    },
+    "type": "SensorML"
+  },
+  "procedureDescriptionFormat": "http://www.opengis.net/sensorML/1.0.1\n\t",
+  "type": "InsertSensor"
+}
