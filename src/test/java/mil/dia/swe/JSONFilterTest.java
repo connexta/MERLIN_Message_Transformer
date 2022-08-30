@@ -114,4 +114,9 @@ class JSONFilterTest {
         "{\"uniqueID\":\"urn:ogc:object:Sensor:Trailcam\",\"longName\":\"Super Secret Trailcam\",\"shortName\":\"Trailcam\",\"validTimeStart\":\"2020-01-01T00:00:01Z\",\"sensorLocation\":{\"srsName\":\"EPSG:4979\",\"srsDimension\":\"3\",\"pos\":\"39.69427 -84.10164 0.0\",\"id\":\"sensorLocation\",\"type\":\"Point\"}}",
         result);
   }
+
+  @Test
+  void testMock() {
+    assertEquals(JSONFilter.MOCK_UI_TRANSFORM_RESPONSE, JSONFilter.mockFilter("dummy"));
+  }
 }

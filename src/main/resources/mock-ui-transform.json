@@ -1,0 +1,70 @@
+{
+    "URN": "urn:ogc:object:Sensor:gboss:M35",
+    "uniqueID": "urn:ogc:object:Sensor:gboss:M35",
+    "longName": "M35-GBOSS",
+    "shortName": "M35-GBOSS",
+    "manufacturer": "TBD",
+    "systemName": "M35",
+    "sensorString": "GBOSS",
+    "missionName": "BoldQuest 20.2",
+    "intendedApplication": "Surveillance",
+    "systemType": "GBOSS",
+    "intelligenceDiscipline": "MASINT",
+    "intelligenceSubdiscipline": "Geophysical",
+    "intelligenceSubdisciplineTechnique": "multi-discipline",
+    "validTimeStart": "2020-10-23T20:25:50Z",
+    "validTimeEnd": "2040-01-01T10:00:00.000Z",
+    "assignedProcedure": "urn:ogc:object:Sensor:gboss:M35",
+    "assignedOffering": "urn:ogc:object:Sensor:gboss:M35",
+    "securityConstraint": {
+      "releaseableTo": "USA",
+      "ownerProducer": "USA",
+      "type": "Security",
+      "classification": "U"
+    },
+    "legalConstraint": {
+      "intellectualPropertyRights": false,
+      "copyRights": false,
+      "documentation": "",
+      "type": "Rights",
+      "privacyAct": false
+    },
+    "capabilities": {
+        "Pan\/Tilt\/Zoom-Elements":
+        {
+            "PTZCapabilitiesPresent": {
+                "type": "Category",
+                "value": "Pan Tilt Zoom"
+            },            
+            "Pan-Range": {
+                "type": "QuantityRange",
+                "uom": "deg",
+                "value": "0.0 0.0"
+            },
+            "Tilt-Range": {
+                "type": "QuantityRange",
+                "uom": "deg",
+                "value": "0.0 0.0"
+            },
+            "Zoom-Range": {
+                "type": "QuantityRange",
+                "value": "0.0 12.0"
+            }
+        },
+        "Imager-Elements":
+        {
+            "FocusRange": {
+                "type": "QuantityRange",
+                "value": "0.0 100.0"
+            }
+        }
+    },
+    "sensorLocation": {
+      "srsName": "EPSG:4979",
+      "srsDimension": "3",
+      "pos": "39.342817 -86.014962 0.0",
+      "description": "Camp Adelberry",
+      "id": "sensorLocation",
+      "type": "Point"
+    }
+  }

@@ -8,12 +8,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SWETransformTest {
     @Test
-    void testSample() {
+    void testTrailcam() {
         InputStream is = getClass().getClassLoader().getResourceAsStream("trailcam.xml");
         String json = SWETransform.insertSensorToJSON(is);
         System.out.println(json);
         assertNotNull(json);
-
-
     }
 }
